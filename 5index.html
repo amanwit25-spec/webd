@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanwaghade |  IT25066</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0f0c29] to-[#302b63] to-[#24243e] antialiased min-h-screen flex flex-col selection:bg-red-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="bg-[#000428] to-[#004e92] sticky top-0 z-30 border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo with Gradient Icon -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-amber-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-leaf text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-2xl tracking-tight bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 bg-clip-text text-transparent">
+                        AmanWaghade
+                    </span>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-from-[#7f00ff] to-[#e100ff]">IT25066</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#hero" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="#menu" class="text-emerald-600 font-bold">Aman Menu</a>
+                <a href="#features" class="hover:text-emerald-600 transition-colors">Why Aman</a>
+                <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Button with Gradient -->
+            <a href="#menu" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-emerald-600 hover:to-amber-600 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                Explore Menu
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-teal-50/50 to-amber-50 overflow-hidden">
+        <!-- Background Gradient Orbs -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-br from-emerald-300/30 to-teal-400/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-gradient-to-tr from-amber-300/30 to-emerald-300/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-amber-500/10 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+                🌱 100% Plant-Based & Cruelty-Free
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+                Most Tasty Dishes Available <span class="bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600 bg-clip-text text-transparent">In Our Restaurent</span>
+            </h1>
+            <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Handcrafted plant-based meals made with fresh organic greens, cold-pressed oils, rich superfoods, and authentic Indian & global flavors.
+            </p>
+
+            <!-- Quick Filter Pill Highlights -->
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> 100% Dairy-Free
+                </span>
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-teal-500"></span> Organic Superfoods
+                </span>
+                <span class="px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> Eco-Friendly Packaging
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN FOOD MENU SECTION (TAILWIND CSS GRID) -->
+    <section id="menu" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title with Gradient Accent -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-red-900 tracking-tight">
+                Our Popular Dishes
+            </h2>
+            <div class="mt-3 w-24 h-1.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-500 text-sm max-w-lg mx-auto">
+                Discover our signature plant-based dishes neatly arranged using responsive Tailwind CSS Grid.
+            </p>
+        </div>
+
+        <!-- TAILWIND CSS GRID CONTAINER -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- VEGAN FOOD CARD 1 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container with Hover Zoom & Gradient Badge Overlay -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://cdn.britannica.com/98/235798-050-3C3BA15D/Hamburger-and-french-fries-paper-box.jpg" 
+                             alt="Avocado & Quinoa Buddha Bowl" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-500 shadow-md">
+                            Superfood Bowl
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹299
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.5 (200+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                         Healthy food choices are happy food choices
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                           Healthy foods not only keep our tummy happy but also protects us from various diseases and infections.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-red-600 hover:to-blue-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- VEGAN FOOD CARD 2 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="data:image/jpeg;base64,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" 
+                             alt="Creamy Truffle Mushroom Pasta" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-teal-500 to-cyan-600 shadow-md">
+                            best
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹300
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4(65+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                           Tasty and Healthy
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Handmade durum pasta tossed in rich cashew-based truffle cream sauce with sauteed wild porcini mushrooms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-blue-600 hover:to-red-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- VEGAN FOOD CARD 3 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTlhsj3baxlKBj-MvM1FEbfW9Ah3Jkpl8eKkCgIxlBbA&s=10" 
+                             alt="Plant-Based Gourmet Smash Burger" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 shadow-md">
+                            Best Seller
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹329
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">5.0 (230+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Plant-Based Gourmet Burger
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            House-crafted lentil & mushroom protein patty, melted vegan cheddar, caramelized onion jam, and vegan aioli on a toasted bun.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-emerald-600 hover:to-amber-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- VEGAN FOOD CARD 4 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5suNq7mw-aitvYs0J1V95iwWPOKDdr_-KXXMUmyPU3A&s=10" 
+                             alt="Woodfired Vegan Margherita Pizza" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-500 shadow-md">
+                            Woodfired Special
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹289
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.7 (160+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Woodfired Vegan Margherita Pizza
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Artisanal sourdough crust, San Marzano tomato reduction, melted organic cashew mozzarella, and aromatic basil leaves.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-emerald-600 hover:to-amber-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- VEGAN FOOD CARD 5 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfs0IDEsyHS9lDf9vGBqooOGTNaYcC4p1tyUvfFmHk1g&s=10" 
+                             alt="Jackfruit & Avocado Street Tacos" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-amber-500 shadow-md">
+                            Spicy Delight
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹249
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.8 (125+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Jackfruit & Avocado Street Tacos
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            Three warm corn tortillas stuffed with smoky pulled jackfruit, avocado crema, pickled pink onions, and fresh cilantro.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-emerald-600 hover:to-amber-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- VEGAN FOOD CARD 6 -->
+            <div class="bg-[#948e99] to-[#2e1437] rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div>
+                    <!-- Image Container -->
+                    <div class="relative h-60 w-full overflow-hidden bg-slate-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP94lersI0C9l28KKmjqDQEZjgJQ_yTDBkJiWwCYfr8Q&s=10" 
+                             alt="Raw Berry Cheesecake" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40"></div>
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-purple-500 to-indigo-500 shadow-md">
+                            Raw & Guilt-Free
+                        </span>
+                        
+                        <!-- Price Tag in Rupees -->
+                        <span class="absolute bottom-4 right-4 px-3.5 py-1.5 rounded-xl text-sm font-extrabold text-white bg-slate-900/80 backdrop-blur-md border border-white/20">
+                            ₹199
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-6">
+                        <div class="flex items-center gap-1.5 text-amber-500 text-xs font-bold mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 font-semibold ml-1">4.9 (180+ reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                            Raw Wild Berry Cheesecake
+                        </h3>
+                        <p class="mt-2 text-slate-600 text-xs leading-relaxed">
+                            No-bake almond & date crust with creamy cashew coconut cream filling and wild blueberry reduction.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Button with Gradient -->
+                <div class="px-6 pb-6 pt-2">
+                    <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-[#7f00ff] to-[#e100ff] hover:from-emerald-600 hover:to-amber-600 text-white font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Features Section -->
+    <section id="features" class="py-16 bg-gradient-to-br from-emerald-500/5 via-teal-500/5 to-amber-500/5 border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-8 bg-blue-300 rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">100% Plant-Based</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Zero dairy, zero cruelty. Crafted with organic herbs, nuts, and farm-fresh produce.</p>
+                </div>
+
+                <div class="p-8 bg-blue-300 rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-teal-500 to-amber-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Nutrient Dense</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Rich in natural antioxidants, clean plant protein, healthy fats, and essential minerals.</p>
+                </div>
+
+                <div class="p-8 bg-blue-300 rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-amber-500 to-emerald-500 flex items-center justify-center text-white text-2xl shadow-md mb-4">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900">Eco Friendly</h4>
+                    <p class="text-slate-500 text-xs mt-2 leading-relaxed">Packaged in 100% biodegradable, plastic-free compostable containers.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#948e99] to-[#2e1437] text-slate-600 py-10 mt-auto border-t border-slate-200">
+        <!-- Top Gradient Accent Line -->
+        <div class="h-1 w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500 -mt-10 mb-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium">
+            <!-- Brand copyright -->
+            <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-red-500 to-blue-500 flex items-center justify-center text-white text-xs font-bold">
+                    G
+                </div>
+                <span class="font-bold text-slate-800">GreenBite Vegan Kitchen</span> &copy; 2026. All rights reserved.
+            </div>
+
+            <!-- Social Media Anchor Links -->
+            <div class="flex items-center gap-3">
+                <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-amber-500 hover:to-rose-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+                <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-emerald-500 hover:to-teal-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="#" aria-label="Twitter / X" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-teal-500 hover:to-cyan-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-x-twitter text-sm"></i>
+                </a>
+                <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-gradient-to-tr hover:from-emerald-500 hover:to-green-600 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
