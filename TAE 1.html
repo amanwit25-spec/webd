@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table Generator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 to-purple-500 min-h-screen">
+
+    <div class="flex justify-center items-center min-h-screen p-4">
+
+        <div class="bg-white w-full max-w-md p-6 rounded-2xl shadow-2xl">
+
+            <h1 class="text-3xl font-bold text-center text-purple-700">
+                Multiplication Table
+            </h1>
+
+            <p class="text-center text-gray-500 mt-2 mb-6">
+                Enter a number to generate its table
+            </p>
+
+            <input
+                type="number"
+                id="number"
+                placeholder="Enter number"
+                class="w-full p-3 border-2 border-purple-300
+                       rounded-lg text-center text-lg mb-4"
+            >
+
+            <button
+                onclick="generateTable()"
+                class="w-full bg-purple-600 text-white
+                       p-3 rounded-lg font-bold
+                       hover:bg-purple-700">
+                Generate Table
+            </button>
+
+            <button
+                onclick="clearTable()"
+                class="w-full bg-gray-500 text-white
+                       p-3 rounded-lg font-bold mt-3
+                       hover:bg-gray-600">
+                Clear
+            </button>
+
+            <div
+                id="result"
+                class="mt-6 bg-purple-50 p-4 rounded-lg
+                       text-center text-lg font-semibold">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function generateTable() {
+
+            let number = document.getElementById("number").value;
+
+            if (number == "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a number!";
+                return;
+            }
+
+            let table = "";
+
+            for (let i = 1; i <= 10; i++) {
+
+                table = table + number + " × " + i
+                      + " = " + (number * i) + "<br>";
+
+            }
+
+            document.getElementById("result").innerHTML = table;
+        }
+
+
+        function clearTable() {
+
+            document.getElementById("number").value = "";
+
+            document.getElementById("result").innerHTML = "";
+
+        }
+
+    </script>
+
+</body>
+</html>
